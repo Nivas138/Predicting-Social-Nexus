@@ -1,0 +1,2 @@
+# Predicting-Social-Nexus
+The aim of this project is to predict the social nexus in social network. Here, we can predict the influence rate for individual person or comparative study of influence rate between the multiple users by using several different learning models and auxiliary techniques.In our project , the goal is to predict social nexus in specific social forum such as Twitter for Political foray.
