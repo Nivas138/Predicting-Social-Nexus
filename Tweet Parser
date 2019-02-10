@@ -1,0 +1,60 @@
+def tw_parser():
+    global qw, ge, l, t, c, d
+
+# USE EXAMPLES:
+# =-=-=-=-=-=-=
+# % twsearch <search term>            --- searches term
+# % twsearch <search term> -g sf      --- searches term in SF geographic box <DEFAULT = none>
+# % twsearch <search term> -l en      --- searches term with lang=en (English) <DEFAULT = en>
+# % twsearch <search term> -t {m,r,p} --- searches term of type: mixed, recent, or popular <DEFAULT = recent>
+# % twsearch <search term> -c 12      --- searches term and returns 12 tweets (count=12) <DEFAULT = 1>
+# % twsearch <search term> -o {ca, tx, id, co, rtc)   --- searches term and sets output options <DEFAULT = ca, tx>
+
+# Parse the command
+    parser = argparse.ArgumentParser(description='Twitter Search')
+    parser.add_argument(action='store', dest='query', help='Search term string')
+    parser.add_argument('-g', action='store', dest='loca', help='Location (lo, nyl, nym, nyu, dc, sf, nb')
+    parser.add_argument('-l', action='store', dest='l', help='Language (en = English, fr = French, etc...)')
+    parser.add_argument('-t', action='store', dest='t', help='Search type: mixed, recent, or popular')
+    parser.add_argument('-c', action='store', dest='c', help='Tweet count (must be <50)')
+    args = parser.parse_args()
+
+    qw = args.query     # Actual query word(s)
+    ge = ''
+
+    # Location
+    loca = args.loca
+    if (not(loca in ('lo', 'nyl', 'nym', 'nyu', 'dc', 'sf', 'nb')) and (loca)):
+        print ("WARNING: Location must be one of these: lo, nyl, nym, nyu, dc, sf, nb")
+        exit()
+    if loca:
+        ge = locords[loca]
+
+    # Language
+    l = args.l
+    if (not l):
+        l = "en"
+    if (not(l in ('en','fr','es','po','ko', 'ar'))):
+        print ("WARNING: Languages currently supported are: en (English), fr (French), es (Spanish), po (Portuguese), ko (Korean), ar (Arabic)")
+        exit()
+
+    # Tweet type
+    t = args.t
+    if (not t):
+        t = "recent"
+    if (not(t in ('mixed','recent','popular'))):
+        print ("WARNING: Search type must be one of: (m)ixed, (r)ecent, or (p)opular")
+        exit()
+
+    # Tweet count
+    if args.c:
+        c = int(args.c)
+        if (c > cmax):
+            print ("Resetting count to ",cmax," (maximum allowed)")
+            c = cmax
+        if (not (c) or (c < 1)):
+            c = 1
+    if not(args.c):
+        c = 1
+
+    print ("Query: %s, Location: %s, Language: %s, Search type: %s, Count: %s" %(qw,ge,l,t,c))
