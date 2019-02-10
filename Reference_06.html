@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://research.fb.com/three-and-a-half-degrees-of-separation/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Reference_06_files/949ceaf672"></script><script src="./Reference_06_files/nr-1118.min.js.download"></script><script src="./Reference_06_files/780250678829516" async=""></script><script src="./Reference_06_files/1492565937449521" async=""></script><script async="" src="./Reference_06_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Reference_06_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Reference_06_files/recaptcha__en_gb.js.download"></script><script async="" src="./Reference_06_files/gtm.js.download"></script><script id="facebook-jssdk" src="./Reference_06_files/sdk.js.download"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://research.fb.com/wp-content/themes/fb-research/images/gui/facebook.ico">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://research.fb.com/xmlrpc.php">
+<title>Three and a half degrees of separation – Facebook Research</title>
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://www.google.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Facebook Research » Feed" href="https://research.fb.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Facebook Research » Comments Feed" href="https://research.fb.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Facebook Research » Three and a half degrees of separation Comments Feed" href="https://research.fb.com/three-and-a-half-degrees-of-separation/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/research.fb.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Reference_06_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0" href="./Reference_06_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var GDPR = {"ajaxurl":"https:\/\/research.fb.com\/wp-admin\/admin-ajax.php","logouturl":"","i18n":{"aborting":"Aborting","logging_out":"You are being logged out.","continue":"Continue","cancel":"Cancel","ok":"OK","close_account":"Close your account?","close_account_warning":"Your account will be closed and all data will be permanently deleted and cannot be recovered. Are you sure?","are_you_sure":"Are you sure?","policy_disagree":"By disagreeing you will no longer have access to our site and will be logged out."},"is_user_logged_in":"","refresh":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Reference_06_files/saved_resource(1)"></script>
+<script type="text/javascript" src="./Reference_06_files/api.js.download"></script>
+<link rel="https://api.w.org/" href="https://research.fb.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://research.fb.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://research.fb.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.0.3">
+<link rel="canonical" href="https://research.fb.com/three-and-a-half-degrees-of-separation/">
+<link rel="shortlink" href="https://wp.me/p9C5VB-5w">
+<link rel="alternate" type="application/json+oembed" href="https://research.fb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fresearch.fb.com%2Fthree-and-a-half-degrees-of-separation%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://research.fb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fresearch.fb.com%2Fthree-and-a-half-degrees-of-separation%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<style type="text/css">img#wpstats{display:none}</style><meta name="description" content="In honor of Friends Day, we&#39;ve recalculated the classic &#39;Six degrees of separation&#39; statistic for everyone who uses Facebook and determined that the number is actually 3.57. Each person in the world (at least among the 1.55 billion people active on Facebook) is connected to every other person by an average of three and a half steps."><meta property="og:description" content="In honor of Friends Day, we&#39;ve recalculated the classic &#39;Six degrees of separation&#39; statistic for everyone who uses Facebook and determined that the number is actually 3.57. Each person in the world (at least among the 1.55 billion people active on Facebook) is connected to every other person by an average of three and a half steps."><meta property="og:title" content="Three and a half degrees of separation"><meta property="og:image" content="https://research.fb.com/wp-content/uploads/2016/11/post00006_image0001.png"><meta property="og:url" content="https://research.fb.com/three-and-a-half-degrees-of-separation"><meta property="og:site_name" content="Facebook Research"><meta property="og:type" content="website">		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+<body class="post-template-default single single-post postid-342 single-format-standard">
+<a class="skip-link screen-reader-text" href="https://research.fb.com/three-and-a-half-degrees-of-separation/#content">Skip to Content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBDNKV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="page" class="page-wrap">
+	<div class="top-menu" role="banner">
+		<div class="grid align-between">
+			<div>
+				<a href="https://research.fb.com/" rel="home" class="logo">
+					<img src="./Reference_06_files/FB_logo.svg" alt="Facebook Research">
+									</a>
+			</div>
+			<div>
+				<form action="https://research.fb.com/" method="get" class="search-form" role="search">
+	<label for="search-input-5c3acd5b09ed7" class="screen-reader-text">Search</label>
+	<input type="search" placeholder="Search" name="s" id="search-input-5c3acd5b09ed7" value="" class="search-field">
+	<button type="submit" class="search-submit">
+		<span class="screen-reader-text">Submit</span>
+		<i class="fa fa-search" aria-hidden="true"></i>
+	</button>
+</form>
+				<a href="javascript:void(0)" class="search show-for-mobile-only">
+					<span class="screen-reader-text">Toggle Search</span>
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+				<!-- TODO: replace logo with a good image/ accouting for 2x retina resolutions -->
+				<button class="toggle-menu" aria-label="Toggle mobile menu" aria-expanded="false" aria-haspopup="true" aria-controls="main-nav">
+					<!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="nav-wrapper">
+				<nav role="navigation" aria-label="Main Navigation" id="main-nav">
+					<ul id="primary-menu" class="menu"><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34"><a href="https://research.fb.com/research-areas/" aria-expanded="false" aria-haspopup="true" class="parentlink"><span>Research Areas</span></a>
+<button class="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i><span class="screen-reader-text">Show dropdown menu</span></button><ul class="sub-menu">
+	<li id="menu-item-5886" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5886"><a href="https://research.fb.com/category/augmented-reality-virtual-reality/"><span>AR/VR</span></a></li>
+	<li id="menu-item-5877" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5877"><a href="https://research.fb.com/category/connectivity/"><span>Connectivity</span></a></li>
+	<li id="menu-item-7114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7114"><a href="https://research.fb.com/category/computational-photography-and-intelligent-cameras/"><span>Computational Photography &amp; Intelligent Cameras</span></a></li>
+	<li id="menu-item-5878" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5878"><a href="https://research.fb.com/category/computer-vision/"><span>Computer Vision</span></a></li>
+	<li id="menu-item-5879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5879"><a href="https://research.fb.com/category/data-science/"><span>Data Science</span></a></li>
+	<li id="menu-item-5880" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5880"><a href="https://research.fb.com/category/economics-and-computation/"><span>Economics &amp; Computation</span></a></li>
+	<li id="menu-item-5881" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5881"><a href="https://research.fb.com/category/facebook-ai-research"><span>Facebook AI Research</span></a></li>
+	<li id="menu-item-5882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5882"><a href="https://research.fb.com/category/human-computer-interaction-and-ux/"><span>Human Computer Interaction &amp; UX</span></a></li>
+	<li id="menu-item-5876" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5876"><a href="https://research.fb.com/category/machine-learning/"><span>Machine Learning</span></a></li>
+	<li id="menu-item-5883" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5883"><a href="https://research.fb.com/category/natural-language-processing-and-speech/"><span>Natural Language Processing &amp; Speech</span></a></li>
+	<li id="menu-item-5884" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5884"><a href="https://research.fb.com/category/security-and-privacy/"><span>Security &amp; Privacy</span></a></li>
+	<li id="menu-item-5885" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5885"><a href="https://research.fb.com/category/systems-and-networking/"><span>Systems &amp; Networking</span></a></li>
+</ul>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="https://research.fb.com/publications/"><span>Publications</span></a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://research.fb.com/people/"><span>People</span></a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-39"><a href="https://research.fb.com/programs/" aria-expanded="false" aria-haspopup="true" class="parentlink"><span>Academic Programs</span></a>
+<button class="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i><span class="screen-reader-text">Show dropdown menu</span></button><ul class="sub-menu">
+	<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="https://research.fb.com/programs/fellowship/"><span>Facebook Fellowship Program</span></a></li>
+	<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="https://research.fb.com/programs/emerging-scholars"><span>Emerging Scholar Awards</span></a></li>
+	<li id="menu-item-4376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4376"><a href="https://research.fb.com/programs/research-awards/"><span>Research Awards</span></a></li>
+	<li id="menu-item-1898" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1898"><a href="https://research.fb.com/programs/research-collaborations/"><span>Research Collaborations</span></a></li>
+	<li id="menu-item-67" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-67"><a href="https://research.fb.com/programs/faculty-awards"><span>Research Award Recipients</span></a></li>
+	<li id="menu-item-1899" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1899"><a href="https://research.fb.com/programs/post-docs-and-sabbaticals/"><span>Visiting Researchers and Postdocs</span></a></li>
+</ul>
+</li>
+<li id="menu-item-7142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7142"><a href="https://research.fb.com/downloads/"><span>Downloads &amp; Projects</span></a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://research.fb.com/careers/"><span>Careers</span></a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-40 current-menu-item"><a href="https://research.fb.com/blog/"><span>Blog</span></a></li>
+</ul>				</nav><!-- navigation -->
+			</div>
+		</div>
+	</div><!-- top-menu -->
+	<div class="top-menu-shim"></div>
+	<div id="overlay_box">
+	</div>
+	<div class="top_search">
+		<div class="search-wrapper">
+			<form action="https://research.fb.com/" method="get" class="search-form" role="search">
+	<label for="search-input-5c3acd5b0dde2" class="screen-reader-text">Search</label>
+	<input type="search" placeholder="Search" name="s" id="search-input-5c3acd5b0dde2" value="" class="search-field">
+	<button type="submit" class="search-submit">
+		<span class="screen-reader-text">Submit</span>
+		<i class="fa fa-search" aria-hidden="true"></i>
+	</button>
+</form>
+			<a href="javascript:void(0)" class="search_close"><span class="screen-reader-text">Close Search</span></a>
+		</div>
+	</div>
+	<main id="content" role="main">
+<article id="post-342" class="post-342 post type-post status-publish format-standard has-post-thumbnail hentry category-data-science">
+	<header class="post-header single-blog-header">
+		<div class="grid">
+			<div class="col-12">
+				<p class="h6">February 4, 2016</p>
+				<h1>Three and a half degrees of separation</h1>				<p><small>By: <a href="https://research.fb.com/people/bhagat-smriti/" class="author-link">Smriti Bhagat</a>, <a href="https://research.fb.com/people/burke-moira/" class="author-link">Moira Burke</a>, <a href="https://research.fb.com/people/diuk-carlos/" class="author-link">Carlos Diuk</a>, <a href="https://research.fb.com/people/filiz-ismail-onur/" class="author-link">Ismail Onur Filiz</a>, Sergey Edunov</small></p>
+			</div>
+		</div>
+	</header><!-- .entry-header -->
+
+	<div class="page-content">
+		<section class="grid no-top-padding single-post-content">
+			<div class="col-12 col-8-lrg" id="contentSection">
+				<div class="content-wrapper">
+				<div class="featured-image-border">					<div class="video-container">
+													<figure class="video-container" style="background-image:url(&#39;https://research.fb.com/wp-content/uploads/2016/11/post00006_image0001.png&#39;);"></figure>
+												</div>
+					</div><p><em>“I read somewhere that everybody on this planet is separated by only six other people. Six degrees of separation. Between us and everybody else on this planet. The president of the United States. A gondolier in Venice. Fill in the names. . . . How every person is a new door, opening up into other worlds. Six degrees of separation between me and everyone else on this planet. But to find the right six people . . .”</em> – John Guare, <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Separation_(play)">Six Degrees of Separation</a> (1990)</p>
+<p>How connected is the world? Playwrights [1], poets [2], and scientists [3] have proposed that everyone on the planet is connected to everyone else by six other people. In honor of Friends Day, we’ve crunched the Facebook friend graph and determined that the number is 3.57. <strong>Each person in the world (at least among the 1.59 billion people active on Facebook) is connected to every other person by an average of three and a half other people.</strong> The average distance we observe is 4.57, corresponding to 3.57 intermediaries or “degrees of separation.” Within the US, people are connected to each other by an average of 3.46 degrees.</p>
+<p>Our collective “degrees of separation” have shrunk over the past five years. In 2011, researchers at Cornell, the Università degli Studi di Milano, and Facebook computed the average across the 721 million people using the site then, and found that it was 3.74 [4,5]. Now, with twice as many people using the site, we’ve grown more interconnected, thus shortening the distance between any two people in the world.</p>
+<p>Calculating this number across billions of people and hundreds of billions of friendship connections is challenging; we use statistical techniques described below to precisely estimate distance based on de-identified, aggregate data.</p>
+<h2></h2>
+<h2>Some Facebook employees</h2>
+<p><img class="alignnone wp-image-347" src="./Reference_06_files/post00006_image0002.jpg" alt="post00006_image0002" width="118" height="118" srcset="https://research.fb.com/wp-content/uploads/2016/11/post00006_image0002.jpg 320w, https://research.fb.com/wp-content/uploads/2016/11/post00006_image0002.jpg?resize=150,150 150w, https://research.fb.com/wp-content/uploads/2016/11/post00006_image0002.jpg?resize=300,300 300w" sizes="(max-width: 118px) 100vw, 118px"></p>
+<p><a href="https://www.facebook.com/zuck" target="_blank">Mark Zuckerberg</a><br>
+<strong>3.17</strong> degrees of separation</p>
+<p><img class="alignnone size-full wp-image-348" src="./Reference_06_files/post00006_image0003.jpg" alt="post00006_image0003" width="118" height="118"></p>
+<p><a href="https://www.facebook.com/sheryl" target="_blank">Sheryl Sandberg</a><br>
+<strong>2.92</strong> degrees of separation</p>
+<p>The majority of the people on Facebook have averages between 2.9 and 4.2 degrees of separation. Figure 1 (below) shows the distribution of averages for each person.</p>
+<p><img class="alignnone size-full wp-image-349" src="./Reference_06_files/post00006_image0004.png" alt="post00006_image0004" width="1024" height="524" srcset="https://research.fb.com/wp-content/uploads/2016/11/post00006_image0004.png 3258w, https://research.fb.com/wp-content/uploads/2016/11/post00006_image0004.png?resize=300,153 300w, https://research.fb.com/wp-content/uploads/2016/11/post00006_image0004.png?resize=768,393 768w, https://research.fb.com/wp-content/uploads/2016/11/post00006_image0004.png?resize=1024,524 1024w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<p><em>Figure 1. Estimated average degrees of separation between all people on Facebook. The average person is connected to every other person by an average of 3.57 steps. The majority of people have an average between 3 and 4 steps.</em></p>
+<h2>Calculating degrees-of-separation at scale</h2>
+<p>Calculating degrees of separation in a network with hundreds of billions of edges is a monumental task, because the number of people reached grows very quickly with the degree of separation.</p>
+<p>Imagine a person with 100 friends. If each of his friends also has 100 friends, then the number of friends-of-friends will be 10,000. If each of those friends-of-friends also has 100 friends then the number of friends-of-friends-of-friends will be 1,000,000. Some of those friends may overlap, so we need to filter down to the unique connections. We’re only two hops away and the number is already big. In reality this number grows even faster since most people on Facebook have more than 100 friends. We also need to do this computation 1.6 billion times; that is, for every person on Facebook.</p>
+<p>Rather than calculate it exactly, we relied on statistical algorithms developed by Kang and others [6-8] to estimate distances with great accuracy, basically finding the approximate number of people within 1, 2, 3 (and so on) hops away from a source.</p>
+<p>More accurately, for each number of hops we estimate the number of distinct people you can reach from every source. This estimation can be done efficiently using the Flajolet-Martin algorithm [9]. How does it work? Imagine you have a set of people and you want to count how many are unique. First you assign each person a random integer; let’s call it <em>hash</em>. Approximately 1/2 of the people will have an even hash: the binary representation of the hash will end with 0. Approximately 1/4 of the people will have a hash divisible by 4; that is, the binary representation ends with 00. In general, 1/2<sup>n</sup> people will have the binary representation of their hash end with n zeros. Now, we can reverse this and try to count how many different people we have by reading their hash values one by one. To do that, we track the biggest number of zeroes we’ve seen. Intuitively, if there were n zeroes, we can expect set to have c*2<sup>n</sup> unique numbers, where c is some constant. For better accuracy we can do this computation multiple times with different hash values.</p>
+<p>This algorithm maps well to our problem: you just find the biggest number of zeroes among all friends’ hashes. By using a bitwise OR operation on the hash, this process can be repeated recursively to estimate the number of unique friends-of-friends, and then friends-of-friends-of-friends. We used Apache Giraph [10] to run this computation on the entire Facebook friendship graph. In our implementation, at each step each person sends a bitwise ORed hash value to all his friends. We do this recursively and use Flajolet-Martin’s math to estimate the number of unique friends for each degree of separation.</p>
+<p>In summary, we find that the world is more closely connected than you might think.</p>
+<p><em>By Sergey Edunov (3.46), Carlos Greg Diuk (3.16), Ismail Onur Filiz (3.33), Smriti Bhagat (3.32), and Moira Burke (3.35)</em></p>
+<p><em>Cover image by Diana MacLean (3.26)</em></p>
+<h2>References</h2>
+<p>[1] <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Separation_(play)">Six Degrees of Separation (play) – Wikipedia</a><br>
+[2] <a href="https://en.wikipedia.org/wiki/Frigyes_Karinthy">Frigyes Karinthy – Wikipedia</a><br>
+[3] <a href="https://en.wikipedia.org/wiki/Small-world_experiment">Small-world experiment – Wikipedia </a><br>
+[4] Backstrom, L., Boldi, P., Rosa, M., Ugander, J., &amp; Vigna, S. (2012). <a href="http://arxiv.org/abs/1111.4570">Four degrees of separation</a>. <em>Proceedings of the 4th Annual ACM Web Science Conference</em>, 33-42.<br>
+[5] Ugander, J., Karrer, B., Backstrom, L., &amp; Marlow, C. (2011). <a href="http://arxiv.org/abs/1111.4503">The anatomy of the Facebook social graph</a>.<br>
+[6] Kang, U., Papadimitriou, S., Sun, J., Tong H. (2011). <a href="http://www.cs.cmu.edu/~ukang/papers/CentralitySDM2011.pdf">Centralities in Large Networks: Algorithms and Observations</a>. <em>Proceedings of the SIAM International Conference on Data Mining</em>.<br>
+[7] Palmer, C., Gibbons, P., &amp; Faloutsos, C. (2002). <a href="http://tinyurl.com/jtcrzeu">ANF: A fast and scalable tool for data mining in massive graphs</a>. <em>Proceedings of the eighth ACM SIGKDD international conference on Knowledge discovery and data mining</em>. 81-90.<br>
+[8] Cohen, E. (1997) <a href="http://www.sciencedirect.com/science/article/pii/S0022000097915348">Size-estimation framework with applications to transitive closure and reachability</a>. <em>Journal of Computer and System Sciences</em> 55(3): 441-453.<br>
+[9] <a href="https://en.wikipedia.org/wiki/Flajolet%E2%80%93Martin_algorithm">Flajolet-Martin algorithm</a><br>
+[10] <a href="http://giraph.apache.org/">http://giraph.apache.org/</a></p>
+				</div>
+				<div class="post-tags">
+	<div class="areas-wrapper">
+		Areas: 					<a href="https://research.fb.com/category/data-science/">
+													<img src="./Reference_06_files/icon-data-science.svg" alt="Data Science" aria-hidden="true">
+							Data Science					</a>	</div>
+
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Reference_06_files/j-GHT1gpo6-.html" style="border: none;"></iframe></div><div></div></div></div>
+<div class="fb-like fb_iframe_widget" data-href="https://research.fb.com/three-and-a-half-degrees-of-separation/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fresearch.fb.com%2Fthree-and-a-half-degrees-of-separation%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 96px; height: 20px;"><iframe name="f1ea7661de08758" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="./Reference_06_files/like.html" style="border: none; visibility: visible; width: 96px; height: 20px;" class=""></iframe></span></div>
+</div>
+			</div>
+			<div class="col-12 col-4-lrg">
+							<aside class="grid-related" role="complementary">
+													<h2 class="header-blog-related h4 h4-excerpt">Related Content</h2>
+					<div class="related-info">
+			<a href="https://research.fb.com/announcing-the-winners-of-the-computational-social-science-methodology-research-awards/" title="Announcing the Winners of the Computational Social Science Methodology Research Awards">
+				<p class="cat-name h6">
+			Blog		</p>
+				<figure class="">
+			<img src="./Reference_06_files/CompSocSciRFP2.jpg" alt="">
+
+					</figure>
+		<h3 class="h5">Announcing the Winners of the Computational Social Science Methodology Research Awards</h3>		<p class="h6">
+			December 18, 2018		</p>
+			</a>
+</div>
+<div class="related-info">
+			<a href="https://research.fb.com/announcing-the-winners-of-the-facebook-crisis-informatics-research-awards/" title="Announcing the Winners of the Facebook Crisis Informatics Research Awards">
+				<p class="cat-name h6">
+			Blog		</p>
+				<figure class="">
+			<img src="./Reference_06_files/disastermaphero.png" alt="">
+
+					</figure>
+		<h3 class="h5">Announcing the Winners of the Facebook Crisis Informatics Research Awards</h3>		<p class="h6">
+			November 16, 2018		</p>
+			</a>
+</div>
+<div class="related-info">
+			<a href="https://code.fb.com/ai-research/floating-point-math/" title="Making floating point math highly efficient for AI hardware" target="_blank">
+				<p class="cat-name h6">
+			Blog		</p>
+				<figure class="">
+			<img src="./Reference_06_files/floating_point_4_darkcolor.004.png" alt="">
+
+					</figure>
+		<h3 class="h5">Making floating point math highly efficient for AI hardware</h3>		<p class="h6">
+			November 8, 2018		</p>
+			</a>
+</div>
+<div class="related-info">
+			<a href="https://research.fb.com/facebook-research-at-cscw-2018/" title="Facebook Research at CSCW">
+				<p class="cat-name h6">
+			Blog		</p>
+				<figure class="">
+			<img src="./Reference_06_files/CSCW-hero-5.png" alt="">
+
+					</figure>
+		<h3 class="h5">Facebook Research at CSCW</h3>		<p class="h6">
+			November 3, 2018		</p>
+			</a>
+</div>
+							</aside>
+						</div>
+		</section>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
+			<section class="adbox-section common-adbox">
+				<div class="grid">
+											<div class="animator" style="opacity: 1;">
+							<p><iframe src="./Reference_06_files/page.html" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe></p>
+						</div>
+										</div>
+			</section>
+			</main> <!-- #content" -->
+</div><!-- #page -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="grid align-between-med">
+			<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-3178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3178"><a target="_blank" href="https://research.fb.com/feed/">RSS Feed</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="https://www.facebook.com/facebook">About</a></li>
+<li id="menu-item-2611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2611"><a href="https://www.facebook.com/careers/university/">Careers</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a href="https://www.facebook.com/about/privacy">Privacy</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58"><a href="https://www.facebook.com/help/cookies">Cookies</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="https://www.facebook.com/policies">Terms</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="https://www.facebook.com/help">Help</a></li>
+</ul></div>			<div class="site-info col-12 order-first-med col-4-med">
+				<p>
+					Facebook © 2019				</p>
+			</div><!-- .site-info -->
+		</div>
+	</footer><!-- #colophon -->
+
+<div class="gdpr gdpr-overlay"></div>
+<div class="gdpr gdpr-privacy-bar" style="display: none;">
+	<div class="gdpr-wrapper">
+		<div class="gdpr-content">
+			<p>To personalize content, tailor and measure ads and provide a safer experience, we use cookies. By tapping on the site you agree to our use of cookies on and off Facebook. Learn more, including about controls: <a href="https://www.facebook.com/policy/cookies/">Cookie policy</a></p>
+		</div>
+		<div class="gdpr-right">
+						<div class="gdpr-buttons">
+				<button class="gdpr-preferences" type="button">Privacy Preferences</button>
+				<button class="gdpr-agreement" type="button">I Agree</button>
+			</div>
+			<span class="gdpr-close"></span>
+		</div>
+	</div>
+</div>
+
+<div class="gdpr gdpr-privacy-preferences">
+	<div class="gdpr-wrapper">
+		<form method="post" class="gdpr-privacy-preferences-frm">
+			<input type="hidden" name="action" value="gdpr_update_privacy_preferences">
+			<input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce" value="9dd82526bb"><input type="hidden" name="_wp_http_referer" value="/three-and-a-half-degrees-of-separation/">			<header>
+				<div class="gdpr-box-title">
+					<h3>Privacy Preference Center</h3>
+					<span class="gdpr-close"></span>
+				</div>
+			</header>
+			<div class="gdpr-mobile-menu">
+				<button type="button">Options</button>
+			</div>
+			<div class="gdpr-content">
+				<div class="gdpr-tabs">
+					<ul class="">
+						<li><button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">Consent Management</button></li>
+																	</ul>
+					<ul class="gdpr-policies">
+											</ul>
+				</div>
+				<div class="gdpr-tab-content">
+					<div class="gdpr-consent-management gdpr-active">
+						<header>
+							<h4>Consent Management</h4>
+						</header>
+						<div class="gdpr-info">
+							<p></p>
+													</div>
+					</div>
+														</div>
+				<input type="hidden" name="all_cookies" value="[]">
+			</div>
+			<footer>
+				<input type="submit" value="Save Preferences">
+			</footer>
+		</form>
+	</div>
+</div>
+
+<div class="gdpr gdpr-general-confirmation">
+	<div class="gdpr-wrapper">
+		<header>
+			<div class="gdpr-box-title">
+				<h3></h3>
+				<span class="gdpr-close"></span>
+			</div>
+		</header>
+		<div class="gdpr-content">
+			<p></p>
+		</div>
+		<footer>
+			<button class="gdpr-ok">OK</button>
+		</footer>
+	</div>
+</div>
+<script type="text/javascript" src="./Reference_06_files/devicepx-jetpack.js.download"></script>
+<script type="text/javascript" src="./Reference_06_files/saved_resource(2)"></script>
+<script type="text/javascript" src="./Reference_06_files/e-201902.js.download" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.8.1',blog:'142066279',post:'342',tz:'-8',srv:'research.fb.com'} ]);
+	_stq.push([ 'clickTrackerInit', '142066279', '342' ]);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"949ceaf672","applicationID":"72733601","transactionName":"MQZWYhAFXhdYAUBfWwhMdVUWDV8KFhFdWFMKBg==","queueTime":0,"applicationTime":89,"atts":"HUFBFFgfTUgbAxYMTxse","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1492565937449521");fbq("track","PageView");</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=1492565937449521&amp;ev=PageView
+&amp;noscript=1">
+</noscript>
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","780250678829516");fbq("track","PageView");</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=780250678829516&amp;ev=PageView
+&amp;noscript=1">
+</noscript>
+<img src="./Reference_06_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body></html>
