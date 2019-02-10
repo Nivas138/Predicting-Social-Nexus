@@ -1,0 +1,29 @@
+def tw_search_json(query, cnt=5):
+    authfile = './auth.k'
+    api = tw_oauth(authfile)
+    results = {}
+    meta = {
+        'username': 'text',
+        'usersince': 'date',
+        'followers': 'numeric',
+        'friends': 'numeric',
+        'authorid': 'text',
+        'authorloc': 'geo',
+        'geoenable': 'boolean',
+        'source': 'text'
+    }
+    data = []
+    for tweet in tweepy.Cursor(api.search, q=query, count=cnt).items():
+        dTwt = {}
+        dTwt['username'] = tweet.author.name
+        dTwt['usersince'] = tweet.author.created_at      #author/user profile creation date
+        dTwt['followers'] = tweet.author.followers_count #number of author/user followers (inlink)
+        dTwt['friends']   = tweet.author.friends_count   #number of author/user friends (outlink)
+        dTwt['authorid']  = tweet.author.id              #author/user ID#
+        dTwt['authorloc'] = tweet.author.location        #author/user location
+        dTwt['geoenable'] = tweet.author.geo_enabled     #is author/user account geo enabled?
+        dTwt['source']    = tweet.source                 #platform source for tweet
+        data.append(dTwt)
+    results['meta'] = meta
+    results['data'] = data
+    return results
